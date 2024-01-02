@@ -127,9 +127,13 @@ if(isset($_REQUEST['todo_add'])){
         </div>
         <input type="button" value="ADD" name="todo_add" id="btn_ins"/>
     </form>
+    <div class="col-md-6">
+    <h3>Todo List</h3>
     <div id="todo_list">
 
     </div>
+    </div>
+
 <script>
         $(document).on('click', '#btn_ins', function() {
         
@@ -202,7 +206,9 @@ if(isset($_REQUEST['todo_add'])){
                     }
                 });
             }
-
+    $(document).ready(function() {
+        setInterval(fetchTodo, 1000);
+    });
 
 </script>
 </body>
