@@ -1,7 +1,7 @@
 <?php
 session_start();
 $todo_list = [];
-if($REQUEST_METHOD == 'POST'){
+if($_SERVER["REQUEST_METHOD"] == 'POST'){
 $todo = $_REQUEST['todo'];
 $todo_list.array_push($todo);
 }
