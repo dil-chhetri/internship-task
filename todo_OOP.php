@@ -27,8 +27,6 @@ class Todo {
 
 
 
-
-    
     public function insertToDatabase($todo)
     {
         if ($_SERVER["REQUEST_METHOD"] == 'POST') {
@@ -91,7 +89,7 @@ class Todo {
 if(isset($_REQUEST['todo_add'])){
 
     $todo = $_REQUEST['todo'];
-    $insert_obj = new Todo();
+    $insert_obj = new Todo($todo);
     $insert_obj->insertToDatabase($todo);
 
 }else if(isset($_REQUEST['todo_update'])){
@@ -104,7 +102,7 @@ if(isset($_REQUEST['todo_add'])){
 }else if(isset($_REQUEST['todo_delete'])){
 
     $todo_id = $_REQUEST['todo_id'];
-    $delete_obj = new Todo();
+    $delete_obj = new Todo($todo);
     $delete_obj->deleteFromDatabase($todo_id);
 }
 
