@@ -138,12 +138,12 @@ if(isset($_REQUEST['todo_add'])){
         if ($('#todo').val() == "") {
             alert('Please write todo first');
         } else {
-            $todo = $('#todo').val();
+            let todo = $('#todo').val();
             $.ajax({
                 type: "POST",
                 url: "todo_OOP.php",
                 data: {
-                    todo: $todo,
+                    todo: todo,
                     
                 },
                 success: function() {
