@@ -18,8 +18,9 @@ class Todo{
     
 }
 
+
 $todo_obj = new Todo("Get work done");
-$todo_item [] = $_SESSION['todo'];
+$todo_item  = $_SESSION['todo'];
 if(empty($todo_item)):
 foreach($todo_item as $item):
     echo $item."\n";
